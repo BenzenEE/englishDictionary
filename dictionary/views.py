@@ -3,7 +3,7 @@ from PyDictionary import PyDictionary
 import requests
 from bs4 import BeautifulSoup
 import nltk
-nltk.download()
+nltk.download('omw-1.4')
 from nltk.corpus import wordnet
 from googletrans import Translator
 #from jmespath import search
