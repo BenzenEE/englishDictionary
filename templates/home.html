@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div id="wrap">
+        <form action="word" autocomplete="on" method="get">
+        <input id="search" name="search" type="text" placeholder="What word you're looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+        </form>
+        <br><br><br><br><br><br>
+        <h3>Word: {{word}}</h3><br>
+        <h3>Meaning: {% for key, value in meanings.items %}
+                         {{key}}: {{value}}
+                         <br>
+                    {% endfor %}
+        </h3><br><br>
+        <h3>Synonyms: {% for synonym in synonyms %} {{synonym}}; {% endfor %}</h3><br><br>
+        <h3>Antonyms: {% for antonym in antonyms %} {{antonym}}; {% endfor %}</h3>
+        <h3>"{{word}}" in bengali: {{btext}}</h3>
+        <h3>"{{word}}" in hindi: {{htext}}</h3>
+      </div>
+</body>
+</html>
