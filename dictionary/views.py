@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import nltk
 nltk.download('omw-1.4')
+nltk.download('wordnet')
 from nltk.corpus import wordnet
 from googletrans import Translator
 #from jmespath import search
